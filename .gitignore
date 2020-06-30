@@ -7,3 +7,4 @@ params.yaml
 *.iml
 venv/
 Dataset/
+src/MaskRCNNImpl/Models/Resnet_40_trained.pth

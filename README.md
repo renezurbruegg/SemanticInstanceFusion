@@ -89,7 +89,11 @@ A description of each parameter is given in the comments of the params file.
 Open output files with [MeshLab](http://www.meshlab.net/]), to see the output.
 
 
-#### Q&A
+### Q&A
  > I want to use a custom segmentation network:
 
   Just change the 'get_mask_for_images' function in the *'src/SemanticMasks/segmenter.py'* class
+  
+  
+### Credits
+Algorithm developed by Nico Schulthess, Thomas Rüegg, Tharshigan Sivakolunthu and René Zurbrügg

@@ -1,0 +1,159 @@
+###############################
+#######General#################
+###############################
+
+#the amount of images supposed to be processed
+n_images: 800
+#starting number (usually 0)
+n_start: 200
+#only process all n-th pictures
+skip: 15
+#determines how big the voxels are supposed to be -> if you're running out of memory just increase the size
+voxel_size: 0.02
+filter_interval: -1 # do not apply median filter
+
+#size of the processed images
+img_size: !!python/tuple [640, 480]
+#0: only using dynamic mask generator
+#1: only using file mask generator (only works if all masks can be found at mask_path)
+#2: using both (uses more gpu power than 1)
+#3: using ScanNet ground truth, requires gt_instance_path & gt_label_path set correctly
+segment_mode: 2
+
+#############################################
+#########Preprocessor Parameters#############
+#############################################
+semantic_masks:
+  #masks with a score beneath this threshold get skipped
+  score_threshold: 0.2
+  # all values below that in a mask get set to zero
+  mask_threshold: 0.3
+  #threshold for evaluating the median and superpixel stuff of the mask
+  rcnn_threshold: 150
+  #threshold for the score in the class image
+  rcnn_threshold_2: 40
+  #determines if we want to use depth images to improve mask scores (decreases performance by a factor ~x1.5)
+  use_depth: False
+  #falloff for depth score
+  depth_f: 5
+  #determines if we want to use superpixel or not. (decreases performance by a factor ~x5)
+  #both of the features above together decrease the performance of my laptop from 1.5fps to 0.2fps
+  use_sp: False
+  fast_slic_comp: 500 # number of components for fast_slic
+  prefetch_size: 1
+  save_masks: False
+
+instance_generation:
+  #if True will merge all classes at the end
+  combine_instances: True
+  #amount of voxels which have to touch for 2 instances to be merged
+  hit_count: 500
+
+  #threshold for merging 2 instances
+  instance_threshold: 0.8
+  hit_count_low: 200
+  #if the amount of available instances runs low we use a lower hit_count to free up some instance space
+  #hit_count_low: 100
+  #distance: 0.1 #paramter to get mesh for instance: cluster radius
+  #min_size: 100 #paramter to get mesh for instance: to avoid noise and small cluster/ num of vertics
+
+
+#########
+##Paths##
+###########################################################################
+
+#Model
+model_path: "src/MaskRCNNImpl/Models/Resnet_40_trained.pth"
+labels_path: "Dataset/labels_40.csv"
+
+#
+#mask_path: "E:\\scene0217_00\\scene0217_00\\masks"
+#rgb_path: "E:\\scene0217_00\\scene0217_00\\color"
+#d_path: "E:\\scene0217_00\\scene0217_00\\depth"
+#pose_path: "E:\\scene0217_00\\scene0217_00\\pose"
+#output_path: "E:\\scene0217_00\\scene0217_00\\fused"
+##
+### Only needed when segment_mode is set to 3
+#gt_instance_path: "E:\\scene0217_00\\scene0217_00\\instance-filt"
+#gt_label_path: "E:\\scene0217_00\\scene0217_00\\label-filt"
+
+
+#mask_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\masks"
+#rgb_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\color"
+#d_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\depth"
+#pose_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\pose"
+#output_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\fused"
+##
+### Only needed when segment_mode is set to 3
+#gt_instance_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\instance-filt"
+#gt_label_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\label-filt"
+
+camera_intrinsics_path : "Dataset/camera-intrinsics.txt"
+##Data
+#mask_path: "E:\\new_scene\\scene0003_00\\masks"
+#rgb_path: "E:\\new_scene\\scene0003_00\\color"
+#d_path: "E:\\new_scene\\scene0003_00\\depth"
+#pose_path: "E:\\new_scene\\scene0003_00\\pose"
+#output_path: "E:\\new_scene\\scene0003_00\\fused"
+
+# Only needed when segment_mode is set to 3
+#gt_instance_path: "E:\\new_scene\\scene0003_00\\instance-filt"
+#gt_label_path: "E:\\new_scene\\scene0003_00\\label-filt"
+
+
+
+#
+#
+
+mask_path: "Dataset\\masks"
+rgb_path: "Dataset\\color"
+d_path: "Dataset\\depth"
+pose_path: "Dataset\\pose"
+output_path: "output"
+#
+### Only needed when segment_mode is set to 3
+gt_instance_path: "Dataset\\groundtruth\\instance-filt"
+gt_label_path: "Dataset\\groundtruth\\label-filt"
+
+###################################
+##########Debug####################
+###################################
+
+debug:
+
+  extract_meshes_for_instance:
+    enabled: False
+    class: 40
+
+  monitor_progress:
+    enabled: False
+    volume_images: False
+    path: "Dataset\\progress"
+
+    monitor_instances:
+      enabled: False
+      classes: 3 #-1 for all otherwise specific class number
+      combine: False # combine instances after every frame
+
+  export_class_image:
+    enabled: False
+    path: "Dataset\\progress"
+    ignore_score: True
+
+  export_masks:
+    enabled: False
+    path: "Dataset\\progress"
+
+  fusion:
+    enabled: False
+    classes: True
+    instances: True
+    duplicate_check: True
+
+  instance_generator:
+    enabled: False
+    class_number: 3 # class number to debug or -1 if all classes
+
+  groundtruth_mask:
+    save: False
+    path: "E:\\new_scene\\scene0003_00"

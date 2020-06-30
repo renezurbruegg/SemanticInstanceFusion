@@ -1,0 +1,9 @@
+*.ply
+*.pyc
+*.yaml
+/output/
+params.yaml
+*.xml
+*.iml
+venv/
+Dataset/

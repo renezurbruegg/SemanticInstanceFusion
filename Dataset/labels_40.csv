@@ -1,0 +1,41 @@
+0;unknown;0;0;0
+1;wall;21;118;128
+2;floor;5;45;150
+3;cabinet;218;211;186
+4;bed;112;227;220
+5;chair;146;139;131
+6;sofa;216;57;2
+7;table;113;194;154
+8;door;42;17;166
+9;window;70;65;243
+10;bookshelf;102;211;31
+11;picture;102;15;135
+12;counter;45;30;202
+13;blinds;214;156;139
+14;desk;44;94;89
+15;shelves;111;155;136
+16;curtain;185;15;237
+17;dresser;157;13;204
+18;pillow;17;26;182
+19;mirror;2;71;174
+20;floor mat;70;26;57
+21;clothes;66;224;222
+22;ceiling;233;221;78
+23;books;84;233;29
+24;refridgerator;157;57;226
+25;television;13;144;87
+26;paper;101;77;238
+27;towel;95;117;187
+28;shower curtain;100;87;222
+29;box;188;145;55
+30;whiteboard;220;138;204
+31;person;46;183;229
+32;night stand;239;30;183
+33;toilet;205;207;71
+34;sink;119;66;213
+35;lamp;24;22;225
+36;bathtub;155;153;12
+37;bag;87;10;76
+38;otherstructure;25;155;107
+39;otherfurniture;167;167;201
+40;otherpro;238;191;68

@@ -2,11 +2,9 @@
 This is a python script that fuses RGB-D images and their poses into a Truncated Signed Distance function that additionally contains semantic and instance information for each voxel. 
 
 Once the Semantic Instance TSDF Volume is fused, different meshes (Instance, Semantic, RGB, Score) can be extracted.
-
-![Example](https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/example.png  =150x50)
-
-![Example](https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/s3_overview.PNG | width=100)
-![Example](https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/scene3_instance.PNG)
+<img src="https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/example.png" width="48">
+<img src="https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/s3_overview.PNG" width="48">
+<img src="https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/scene3_instance.PNG" width="48">
 
 ## References
 This code is based on the TSDF Fusion implementation by [Andy Zeng](https://github.com/andyzeng/tsdf-fusion-python).

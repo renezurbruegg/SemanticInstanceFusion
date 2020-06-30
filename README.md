@@ -96,4 +96,4 @@ Open output files with [MeshLab](http://www.meshlab.net/]), to see the output.
   
   
 ### Credits
-Algorithm developed by [Nico Schulthess](https://github.com/NicoSchulthess), [Thomas Rüegg](https://github.com/Thomacdebabo) Tharshigan Sivakolunthu and [René Zurbrügg](https://github.com/renezurbruegg)
+Algorithm developed by [Nico Schulthess](https://github.com/NicoSchulthess), [Thomas Rüegg](https://github.com/Thomacdebabo) [Tharshigan Sivakolunthu](https://github.com/tsivako) and [René Zurbrügg](https://github.com/renezurbruegg)

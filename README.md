@@ -4,7 +4,7 @@ This is a python script that fuses RGB-D images and their poses into a Truncated
 Once the Semantic Instance TSDF Volume is fused, different meshes (Instance, Semantic, RGB, Score) can be extracted.
 <img src="https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/example.png" width="450">
 
-
+## Example - ScanNet Scene 03
 <img src="https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/s3_overview.PNG" width="400"><img src="https://github.com/renezurbruegg/SemanticInstanceFusion/raw/master/imgs/scene3_instance.PNG" width="400">
 
 ## References

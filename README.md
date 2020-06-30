@@ -10,6 +10,9 @@ Once the Semantic Instance TSDF Volume is fused, different meshes (Instance, Sem
 ## References
 This code is based on the TSDF Fusion implementation by [Andy Zeng](https://github.com/andyzeng/tsdf-fusion-python).
 
+The dataset in the Dataset folder is only thought as an example. It is from the [Redwood Dataset](http://redwood-data.org/indoor/dataset.html):
+
+
 ## Installation
 Make sure to have a working cuda version installed.
 ```

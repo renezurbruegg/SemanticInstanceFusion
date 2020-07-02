@@ -2,7 +2,6 @@ numpy
 pandas
 Pillow
 opencv-python
-trimesh
 open3d
 networkx
 scipy

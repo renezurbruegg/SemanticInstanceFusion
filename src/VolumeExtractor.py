@@ -4,7 +4,6 @@ import time
 from enum import Enum
 
 import numpy as np
-import trimesh
 from skimage import measure
 
 usePC = True
@@ -159,7 +158,7 @@ class VolumeMesh:
         self.class_numbers = np.floor((class_label_score - self.scores * (256 * 256)) / 256).astype(int)
         self.instances = (class_label_score - self.scores * 256 * 256 - self.class_numbers * 256).astype(int)
         self.unique_numbers = np.unique(self.class_numbers)
-        
+
         rgb_vals = self.color_vol[self.verts_ind[:, 0], self.verts_ind[:, 1], self.verts_ind[:, 2]]
         colors_b = np.floor(rgb_vals / (256 * 256))
         colors_g = np.floor((rgb_vals - colors_b * (256 * 256)) / 256)
@@ -388,4 +387,3 @@ def pcwrite(filename, xyzrgb):
             xyz[i, 0], xyz[i, 1], xyz[i, 2],
             rgb[i, 0], rgb[i, 1], rgb[i, 2],
         ))
-

@@ -51,11 +51,8 @@ instance_generation:
 
   #threshold for merging 2 instances
   instance_threshold: 0.8
-  hit_count_low: 200
   #if the amount of available instances runs low we use a lower hit_count to free up some instance space
-  #hit_count_low: 100
-  #distance: 0.1 #paramter to get mesh for instance: cluster radius
-  #min_size: 100 #paramter to get mesh for instance: to avoid noise and small cluster/ num of vertics
+  hit_count_low: 200
 
 
 #########
@@ -66,54 +63,17 @@ instance_generation:
 model_path: "src/MaskRCNNImpl/Models/Resnet_40_trained.pth"
 labels_path: "Dataset/labels_40.csv"
 
-#
-#mask_path: "E:\\scene0217_00\\scene0217_00\\masks"
-#rgb_path: "E:\\scene0217_00\\scene0217_00\\color"
-#d_path: "E:\\scene0217_00\\scene0217_00\\depth"
-#pose_path: "E:\\scene0217_00\\scene0217_00\\pose"
-#output_path: "E:\\scene0217_00\\scene0217_00\\fused"
-##
-### Only needed when segment_mode is set to 3
-#gt_instance_path: "E:\\scene0217_00\\scene0217_00\\instance-filt"
-#gt_label_path: "E:\\scene0217_00\\scene0217_00\\label-filt"
-
-
-#mask_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\masks"
-#rgb_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\color"
-#d_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\depth"
-#pose_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\pose"
-#output_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\fused"
-##
-### Only needed when segment_mode is set to 3
-#gt_instance_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\instance-filt"
-#gt_label_path: "E:\\ScanNet_scene0000_00\\ScanNet_scene0000_00\\label-filt"
-
 camera_intrinsics_path : "Dataset/camera-intrinsics.txt"
-##Data
-#mask_path: "E:\\new_scene\\scene0003_00\\masks"
-#rgb_path: "E:\\new_scene\\scene0003_00\\color"
-#d_path: "E:\\new_scene\\scene0003_00\\depth"
-#pose_path: "E:\\new_scene\\scene0003_00\\pose"
-#output_path: "E:\\new_scene\\scene0003_00\\fused"
 
-# Only needed when segment_mode is set to 3
-#gt_instance_path: "E:\\new_scene\\scene0003_00\\instance-filt"
-#gt_label_path: "E:\\new_scene\\scene0003_00\\label-filt"
-
-
-
-#
-#
-
-mask_path: "Dataset\\masks"
-rgb_path: "Dataset\\color"
-d_path: "Dataset\\depth"
-pose_path: "Dataset\\pose"
+mask_path: "Dataset/masks"
+rgb_path: "Dataset/color"
+d_path: "Dataset/depth"
+pose_path: "Dataset/pose"
 output_path: "output"
 #
 ### Only needed when segment_mode is set to 3
-gt_instance_path: "Dataset\\groundtruth\\instance-filt"
-gt_label_path: "Dataset\\groundtruth\\label-filt"
+gt_instance_path: "Dataset/groundtruth/instance-filt"
+gt_label_path: "Dataset/groundtruth/label-filt"
 
 ###################################
 ##########Debug####################
@@ -128,7 +88,7 @@ debug:
   monitor_progress:
     enabled: False
     volume_images: False
-    path: "Dataset\\progress"
+    path: "Dataset/progress"
 
     monitor_instances:
       enabled: False
@@ -137,12 +97,12 @@ debug:
 
   export_class_image:
     enabled: False
-    path: "Dataset\\progress"
+    path: "Dataset/progress"
     ignore_score: True
 
   export_masks:
     enabled: False
-    path: "Dataset\\progress"
+    path: "Dataset/progress"
 
   fusion:
     enabled: False
@@ -156,4 +116,4 @@ debug:
 
   groundtruth_mask:
     save: False
-    path: "E:\\new_scene\\scene0003_00"
+    path: "E:/new_scene/scene0003_00"

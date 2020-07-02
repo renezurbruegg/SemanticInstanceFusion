@@ -90,10 +90,14 @@ Open output files with [MeshLab](http://www.meshlab.net/]), to see the output.
 
 
 ### Q&A
- > I want to use a custom segmentation network:
+> I want to use a custom segmentation network:
 
-  Just change the 'get_mask_for_images' function in the *'src/SemanticMasks/segmenter.py'* class
-  
-  
+Just change the 'get_mask_for_images' function in the *'src/SemanticMasks/segmenter.py'* class
+
+> I want to use another dataset:
+
+ Make sure your dataset contains RGB images, depth images, camera poses and camera intrinsics and has the same naming convention as the provided dataset. Then, you can adjust ```camera_intrinsics_path```, ```rgb_path```, ```d_path``` and ```pose_path``` in the params.yaml.
+
+
 ### Credits
-Algorithm developed by [Nico Schulthess](https://github.com/NicoSchulthess), [Thomas Rüegg](https://github.com/Thomacdebabo) [Tharshigan Sivakolunthu](https://github.com/tsivako) and [René Zurbrügg](https://github.com/renezurbruegg)
+Algorithm developed by [Nico Schulthess](https://github.com/NicoSchulthess), [Thomas Rüegg](https://github.com/Thomacdebabo), [Tharshigan Sivakolunthu](https://github.com/tsivako) and [René Zurbrügg](https://github.com/renezurbruegg)

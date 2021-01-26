@@ -1,4 +1,6 @@
 # Semantic Instance Fusion in Python
+Semantic instance fusion can be used to fuse RGB-D images into 3D reconstruction containing semantic labels for each voxel.
+
 This is a python script that fuses RGB-D images and their poses into a Truncated Signed Distance function that additionally contains semantic and instance information for each voxel. 
 
 Once the Semantic Instance TSDF Volume is fused, different meshes (Instance, Semantic, RGB, Score) can be extracted.

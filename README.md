@@ -24,7 +24,7 @@ If you want to extracts masks for RGB images install pytorch
 ```
 pip install torch===1.5.1 torchvision===0.6.1 -f https://download.pytorch.org/whl/torch_stable.html
 ```
-An download our pretrained Model
+An download our [pretrained Model](https://drive.google.com/file/d/1CGXF--IecmGlmmw7lUTTBuPkXQrOXzkv/view?usp=drivesdk) 
 ```
 python src\MaskRCNNImpl\Models\download_model.py
 ```
@@ -88,7 +88,7 @@ The params file lets you specify most of the parameters used during the fusion p
 A description of each parameter is given in the comments of the params file.
 
 ### Output
-Open output files with [MeshLab](http://www.meshlab.net/]), to see the output.
+Open output files with [MeshLab](http://www.meshlab.net/), to see the output.
 
 
 ### Q&A

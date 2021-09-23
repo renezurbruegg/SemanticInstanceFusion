@@ -8,3 +8,4 @@ scipy
 fast_slic
 numba
 pycuda
+scikit-image

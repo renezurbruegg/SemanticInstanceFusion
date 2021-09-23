@@ -151,7 +151,7 @@ class DynamicMaskGenerator:
             mask_list.reverse()
             self.prefetched_masks[img_list[j]] = mask_list
             if self.save_flag:
-                s = self.mask_path + "/%05d" % (img_number+img_list[j])
+                s = self.mask_path + "/%05d" % (img_list[j])
                 # Creates the directory to store the masks if it does not exist yet.
                 if not os.path.exists(s):
                     os.mkdir(s)
